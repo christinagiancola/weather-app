@@ -1,0 +1,20 @@
+.card {
+  margin: auto;
+  width: 40%;
+  min-width: 300px;
+  max-width: 500px;  
+  text-align: center;
+  font-family: Nunito, sans-serif;
+  font-size: 1.2rem;
+  text-transform: lowercase;
+}
+
+.title {
+  padding-top: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.text {
+  margin: 0px;
+}

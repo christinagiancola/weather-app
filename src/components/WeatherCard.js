@@ -3,9 +3,12 @@ import Card from 'react-bootstrap/Card';
 
 function WeatherCard() {
   return (
-    <div>
+    <div className={styles.card}>
       <Card>
-        <p>Todays Temp: 100</p>
+        <h1 className={styles.title}>Today</h1>
+        <hr/>
+        <p className={styles.text}>Current Temp: 70&deg;F</p>
+        <p className={styles.text}>Max Temp: 85&deg;F</p>
       </Card>
     </div>
   );

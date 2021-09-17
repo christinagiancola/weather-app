@@ -1,3 +1,7 @@
-.TextColor {
-  color: blue;
+.text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8em;  
+  text-transform: lowercase;
+  text-align: center;
+  padding: 20px 20px;
 }

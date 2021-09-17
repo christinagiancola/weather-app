@@ -2,7 +2,10 @@ import styles from './Footer.module.css';
 
 function Footer() {
   return (
-    <h4 className={styles.TextColor}>Built using Open Weather API</h4>
+    <div className={styles.footer}>
+      <h4 className={styles.text}>App created by Christina Giancola</h4>
+      <h4 className={styles.text}>Powered by <a href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a></h4>
+    </div>
   );
 }
 
