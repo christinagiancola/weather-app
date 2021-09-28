@@ -1,21 +1,23 @@
+import { useState } from 'react';
 import styles from './SearchBar.module.css';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
-
 
 function SearchBar() {
+  const [location, setLocation] = useState("Richmond");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(`Input received: ${location}`);
+  };
+
   return (
     <div>
-      <InputGroup className="mb-3">
-        <FormControl 
-          placeholder="What's the weather like in..."
-          aria-label="Forecast City"
-        />
-        <Button variant="outline-secondary">
-          Get Forecast
-        </Button>
-      </InputGroup>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Forecast City:
+          <input type="text" value={location} onChange={e => setLocation(e.target.value)}/>
+        </label>
+        <button />
+      </form>
     </div>
   );
 }
