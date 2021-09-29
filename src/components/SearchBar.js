@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import styles from './SearchBar.module.css';
 
 function SearchBar() {
@@ -11,12 +12,17 @@ function SearchBar() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <label>
           Forecast City:
-          <input type="text" value={location} onChange={e => setLocation(e.target.value)}/>
+          <input 
+            type="text" 
+            value={location} 
+            onChange={e => setLocation(e.target.value)}
+            className={styles.input}
+          />
         </label>
-        <button />
+        <Button variant="outline-dark" size="sm">Get Forecast</Button>
       </form>
     </div>
   );

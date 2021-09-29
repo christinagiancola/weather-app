@@ -1,0 +1,14 @@
+.button {
+  background-color: transparent;
+}
+
+.form {
+  font-family: Nunito, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  margin: .25rem .5rem;
+}
