@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import styles from './SearchBar.module.css';
 
-function SearchBar() {
-  const [location, setLocation] = useState("Richmond");
+function SearchBar({ location, setLocation }) {
+  const [inputText, setInputText] = useState(`${location}`)
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Input received: ${location}`);
+    setLocation(inputText);
   };
 
   return (
@@ -17,12 +17,12 @@ function SearchBar() {
           Forecast City:
           <input 
             type="text" 
-            value={location} 
-            onChange={e => setLocation(e.target.value)}
+            value={inputText} 
+            onChange={e => setInputText(e.target.value)}
             className={styles.input}
           />
         </label>
-        <Button variant="outline-dark" size="sm">Get Forecast</Button>
+        <Button type="submit" variant="outline-dark" size="sm">Get Forecast</Button>
       </form>
     </div>
   );

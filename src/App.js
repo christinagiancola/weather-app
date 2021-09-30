@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from './App.module.css';
 import { Container } from 'react-bootstrap';
 import Header from './components/Header.js';
@@ -7,13 +8,15 @@ import Footer from './components/Footer.js';
 
 
 function App() {
+  const [location, setLocation] = useState("Richmond");
+
   return (
     <div>
         <Header />
       <Container className={styles.container}>
-          <SearchBar />
+          <SearchBar location={location} setLocation={setLocation}/>
           <div id='weather-card-container'>
-            <WeatherCard />
+            <WeatherCard location={location}/>
           </div>
       </Container>
         <Footer className={styles.footer}/>
