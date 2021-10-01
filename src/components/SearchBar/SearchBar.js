@@ -14,7 +14,7 @@ function SearchBar({ location, setLocation }) {
     <div>
       <form onSubmit={handleSubmit} className={styles.form}>
         <label>
-          Forecast City:
+          City:
           <input 
             type="text" 
             value={inputText} 
