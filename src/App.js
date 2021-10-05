@@ -9,27 +9,18 @@ import Footer from './components/Footer/Footer.js';
 
 
 function App() {
+  const API_KEY = 'e684477a6ce04c44b0c180151212009';
   const [location, setLocation] = useState("Richmond");
-  const [forecast, setForecast] = useState("[]");
+  const [forecast, setForecast] = useState({});
 
   useEffect(() => {
     const getForecast = async () => {
-      const { data } = await axios.get(`http://api.weatherapi.com/v1/forecast.json`,{
-        params: {
-          key: `e684477a6ce04c44b0c180151212009`,
-          q: location, 
-          days: `3`,
-          alerts: `yes`,
-          aqi:`yes`,
-        },
-      });
-        setForecast(data);
+      let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=3&aqi=yes&alerts=yes`);
+      setForecast(response.data);
     };
-    getForecast();
-  }, [location]);
 
-  console.log(forecast);
-  
+    getForecast();
+  }, [location]);  
 
   return (
     <div>
