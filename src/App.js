@@ -11,14 +11,15 @@ import Footer from './components/Footer/Footer.js';
 function App() {
   const API_KEY = 'e684477a6ce04c44b0c180151212009';
   const [location, setLocation] = useState("Richmond");
-  const [forecast, setForecast] = useState({});
+  const [forecast, setForecast] = useState(null);
 
   useEffect(() => {
     const getForecast = async () => {
+      console.log(`getForecast() triggered`);
       let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=3&aqi=yes&alerts=yes`);
+      console.log(`new forecast set after axios call`);
       setForecast(response.data);
     };
-
     getForecast();
   }, [location]);  
 
@@ -27,7 +28,7 @@ function App() {
       <Header />
       <Container className={styles.container}>
         <SearchBar location={location} setLocation={setLocation}/>
-        <WeatherCard location={location} forecast={forecast}/>
+        {forecast && <WeatherCard location={location} forecast={forecast}/>}
       </Container>
       <Footer className={styles.footer}/>
     </div>

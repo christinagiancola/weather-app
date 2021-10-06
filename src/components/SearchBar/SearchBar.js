@@ -7,6 +7,7 @@ function SearchBar({ location, setLocation }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(`handleSubmit(): location set from inputText`);
     setLocation(inputText);
   };
 
