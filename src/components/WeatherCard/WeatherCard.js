@@ -1,18 +1,17 @@
 import styles from './WeatherCard.module.css';
 import Card from 'react-bootstrap/Card';
 
-function WeatherCard({ location, forecast }) {
+function WeatherCard({ forecast }) {
   console.log(`weatherCard rendered`);
-  console.log(`weatherCard received location: ${location}`);
-  console.log(`weatherCard received forecast for ${forecast.location.name}`);
+  // console.log(`weatherCard received location: ${location}`);
+  // console.log(`weatherCard received forecast for ${forecast.location.name}`);
 
   return (
     <Card className={styles.card}>
       <h1 className={styles.title}>Today</h1>
-      <h2 className={styles.text}>Location: {location}</h2>
+      {forecast && <h2 className={styles.text}>Location: {forecast.location.name}</h2>}
       <hr/>
-      <p className={styles.text}>Current Temp:{forecast.current.temp_f}</p>
-      <p className={styles.text}>Max Temp: 85&deg;F</p>
+      {forecast && <p className={styles.text}>Current Temp:{forecast.current.temp_f}&deg;F</p>}
     </Card>
   );
 };
