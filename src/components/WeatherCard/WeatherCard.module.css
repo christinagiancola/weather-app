@@ -1,8 +1,12 @@
+div {
+  padding: 0;
+}
+
 .card {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  height: 500px;
+  width: 32%;
+  height: auto;
   min-width: 300px;
   max-width: 500px;  
   text-align: center;
@@ -11,10 +15,17 @@
   text-transform: lowercase;
 }
 
-.title {
-  padding-top: 1rem;
-  margin-bottom: 0;
-  padding-bottom: 0;
+.content {
+  padding-bottom: 1rem;
+}
+
+.location {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
 }
 
 .text {
