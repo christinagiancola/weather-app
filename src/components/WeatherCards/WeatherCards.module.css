@@ -5,7 +5,7 @@ div {
 .card {
   margin-left: auto;
   margin-right: auto;
-  width: 32%;
+  width: 28%;
   height: auto;
   min-width: 300px;
   max-width: 500px;  
@@ -13,21 +13,4 @@ div {
   font-family: Nunito, sans-serif;
   font-size: 1.2rem;
   text-transform: lowercase;
-}
-
-.content {
-  padding-bottom: 1rem;
-}
-
-.location {
-  font-size: 2rem;
-  text-decoration: underline;
-}
-
-.cardTitle {
-  font-size: 1.4rem;
-}
-
-.text {
-  margin: 0px;
 }

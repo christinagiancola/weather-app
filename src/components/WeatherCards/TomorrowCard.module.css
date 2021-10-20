@@ -1,0 +1,28 @@
+div {
+  padding: 0;
+}
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 28%;
+  height: auto;
+  min-width: 300px;
+  max-width: 500px;  
+  text-align: center;
+  font-family: Nunito, sans-serif;
+  font-size: 1.2rem;
+  text-transform: lowercase;
+}
+
+.content {
+  padding-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+}
+
+.text {
+  margin: 0px;
+}
