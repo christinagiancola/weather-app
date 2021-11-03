@@ -11,7 +11,7 @@ function App() {
   const [forecast, setForecast] = useState(null);
 
   return (
-    <div>
+    <div className={styles.body}>
       <Header />
       <Container className={styles.container}>
         <SearchBar setForecast={setForecast}/>

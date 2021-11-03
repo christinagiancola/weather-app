@@ -1,0 +1,61 @@
+div {
+	padding: 0;
+}
+
+.card {
+	margin-left: auto;
+	margin-right: auto;
+	width: 28%;
+	height: auto;
+	min-width: 300px;
+	max-width: 500px;
+	text-align: center;
+	font-family: Nunito, sans-serif;
+	font-size: 1.2rem;
+	text-transform: lowercase;
+	box-shadow: 0 0 5px rgb(181, 209, 217);
+	background-color: white;
+}
+
+.content {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+	margin: auto;
+}
+
+.cardTitle {
+	font-size: 1.8rem;
+}
+
+.text {
+	margin: 0px;
+}
+
+.icon {
+	margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+	.card {
+		width: 70%;
+		min-width: 300px;
+		margin-bottom: 1.5rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.card {
+		width: 80%;
+		min-width: 300px;
+		margin-bottom: 1.5rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.card {
+		width: 50%;
+		min-width: 300px;
+		margin-bottom: 1.5rem;
+	}
+}

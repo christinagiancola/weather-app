@@ -1,15 +1,18 @@
-.button {
-  background-color: transparent;
-}
-
 .form {
-  font-family: Nunito, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
+	font-family: Nunito, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1.5rem;
 }
 
 .input {
-  margin: .25rem .5rem;
+	margin: 0.25rem 0.5rem;
+	outline: none;
+	height: 2rem;
+}
+
+.input:focus {
+	box-shadow: 0 0 5px rgb(181, 209, 217);
+	border: 1px solid rgb(181, 209, 217);
 }

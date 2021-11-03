@@ -2,21 +2,15 @@ div {
 	padding: 0;
 }
 
-.card {
-	margin-left: auto;
-	margin-right: auto;
-	width: 28%;
-	height: auto;
-	min-width: 300px;
-	max-width: 500px;
-	text-align: center;
-	font-family: Nunito, sans-serif;
-	font-size: 1.2rem;
-	text-transform: lowercase;
-}
-
 .cardContainer {
-	border: 2px solid red;
 	display: flex;
 	flex-direction: row;
+}
+
+@media (max-width: 1000px) {
+	.cardContainer {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 4rem;
+	}
 }

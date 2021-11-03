@@ -15,9 +15,7 @@ function WeatherCards({ forecast }) {
     );
   } else {
     return (
-      // TODO * improve style of placeholder or add loading animation? *
-      <Card className={styles.card}>
-      </Card>
+      <Card className={styles.cardContainer}></Card>
     );
   }
 };

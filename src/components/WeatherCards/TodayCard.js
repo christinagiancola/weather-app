@@ -1,4 +1,4 @@
-import styles from './TodayCard.module.css';
+import styles from './Card.module.css';
 import Card from 'react-bootstrap/Card';
 
 function TodayCard( {forecast} ) {
@@ -7,7 +7,7 @@ function TodayCard( {forecast} ) {
   return (
     <Card className={styles.card}>
       <div className={styles.content}>
-        <div><img src={conditionIcon}></img></div>
+        <div className={styles.icon}><img src={conditionIcon}></img></div>
         <div className={styles.cardTitle}>Today: {forecast.location.name}</div>
         <div>Currently: {forecast.current.temp_f}&deg;F</div>
         <div>Feels Like: {forecast.current.feelslike_f}&deg;F</div>
