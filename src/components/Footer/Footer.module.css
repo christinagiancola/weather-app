@@ -5,7 +5,7 @@
 
 .text {
 	text-transform: lowercase;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	text-align: center;
 	font-family: Nunito, sans-serif;
 }
@@ -15,5 +15,5 @@
 	padding-top: 0.8rem;
 	bottom: 0;
 	width: 100%;
-	background-color: rgb(181, 209, 217, 0.5);
+	background-color: rgba(81, 103, 109, .5);
 }

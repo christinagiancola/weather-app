@@ -10,9 +10,22 @@
 	margin: 0.25rem 0.5rem;
 	outline: none;
 	height: 2rem;
+  border: none;
+  color: rgb(81, 103, 109);
 }
 
 .input:focus {
 	box-shadow: 0 0 5px rgb(181, 209, 217);
 	border: 1px solid rgb(181, 209, 217);
+}
+
+.button {
+  background-color: whitesmoke;
+  color: rgb(81, 103, 109);
+  box-shadow: 0 0 5px rgb(181, 209, 217);
+  border: none;
+}
+
+.button:hover {
+  background-color: rgb(138, 172, 182);
 }
