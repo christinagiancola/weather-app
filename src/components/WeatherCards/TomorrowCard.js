@@ -3,11 +3,13 @@ import Card from 'react-bootstrap/Card';
 
 function TomorrowCard({ forecast }) {
   let conditionIcon = `https:${forecast.forecast.forecastday[1].day.condition.icon}`;
+  let conditionText = `https:${forecast.forecast.forecastday[1].day.condition.text}`;
+
 
   return (
     <Card className={styles.card}>
       <div className={styles.content}>
-        <div className={styles.icon}><img src={conditionIcon}></img></div>
+        <div className={styles.icon}><img src={conditionIcon} alt={conditionText}></img></div>
         <h1 className={styles.cardTitle}>Tomorrow: {forecast.location.name}</h1>
         <div>Average Temp: {forecast.forecast.forecastday[1].day.avgtemp_f}&deg;F</div>
         <div>High: {forecast.forecast.forecastday[1].day.maxtemp_f}&deg;F</div>

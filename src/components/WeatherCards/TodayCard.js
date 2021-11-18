@@ -3,11 +3,12 @@ import Card from 'react-bootstrap/Card';
 
 function TodayCard( {forecast} ) {
   let conditionIcon = `https:${forecast.current.condition.icon}`;
+  let conditionText = `${forecast.current.condition.text}`;
 
   return (
     <Card className={styles.card}>
       <div className={styles.content}>
-        <div className={styles.icon}><img src={conditionIcon}></img></div>
+        <div className={styles.icon}><img src={conditionIcon} alt={conditionText}></img></div>
         <div className={styles.cardTitle}>Today: {forecast.location.name}</div>
         <div>Currently: {forecast.current.temp_f}&deg;F</div>
         <div>Feels Like: {forecast.current.feelslike_f}&deg;F</div>

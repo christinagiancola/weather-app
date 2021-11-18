@@ -3,12 +3,13 @@ import Card from 'react-bootstrap/Card';
 
 function TonightCard({ forecast }) {
   let conditionIcon = `https:${forecast.forecast.forecastday[0].hour[23].condition.icon}`;
+  let conditionText = `https:${forecast.forecast.forecastday[0].hour[23].condition.text}`;
 
   
   return (
     <Card className={styles.card}>
       <div className={styles.content}>
-        <div className={styles.icon}><img src={conditionIcon}></img></div>
+        <div className={styles.icon}><img src={conditionIcon} alt={conditionText}></img></div>
         <h1 className={styles.cardTitle}>Tonight: {forecast.location.name}</h1>
         <div>Sunset: {forecast.forecast.forecastday[0].astro.sunset}</div>
         <div>Moonrise: {forecast.forecast.forecastday[0].astro.moonrise}</div>
