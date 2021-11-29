@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer.js';
 
 function App() {
   const [forecast, setForecast] = useState(null);
-  const [defaultForecastLocation, setDefaultForecastLocation] = useState("Dallas");
+  const [defaultForecastLocation, setDefaultForecastLocation] = useState("");
 
   useEffect(() => {
     if (window.navigator.geolocation) {

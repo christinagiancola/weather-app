@@ -15,10 +15,12 @@ function SearchBar({ defaultForecastLocation, setForecast }) {
     setLocation(inputText);
   };
 
+  useEffect(() => {
+    setLocation(defaultForecastLocation)    
+  }, [defaultForecastLocation])
   // runs once when page is first rendered, then again every time user submits form
   // updates forecast state in App, causing all components to rerender with new location forecast
   useEffect(() => {
-    console.log(`useEffect called to make weatherAPI request`);
     const getForecast = async () => {
       let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${location}&days=3&aqi=yes&alerts=yes`);
       setForecast(response.data);
