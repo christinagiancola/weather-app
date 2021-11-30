@@ -3,30 +3,32 @@ import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import styles from './SearchBar.module.css';
 
-function SearchBar({ defaultForecastLocation, setForecast }) {
+function SearchBar({ defaultLocation, setForecast }) {
   const WEATHER_API_KEY = 'e684477a6ce04c44b0c180151212009';
   const [inputText, setInputText] = useState("");
-  const [location, setLocation] = useState(defaultForecastLocation);
+  const [inputLocation, setInputLocation] = useState("");
 
-  // when user submits form(enters a location), location is updated
-  // this will trigger useEffect to run again
   const handleSubmit = (e) => {
+    console.log(`SearchBar handleSubmit triggered`);
+    // when user submits SearchBar form, inputLocation is updated which should trigger a new forecastAPI call
     e.preventDefault();
-    setLocation(inputText);
+    setInputLocation(inputText);
   };
 
   useEffect(() => {
-    setLocation(defaultForecastLocation)    
-  }, [defaultForecastLocation])
-  // runs once when page is first rendered, then again every time user submits form
-  // updates forecast state in App, causing all components to rerender with new location forecast
-  useEffect(() => {
-    const getForecast = async () => {
-      let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${location}&days=3&aqi=yes&alerts=yes`);
-      setForecast(response.data);
-    };
-    getForecast();
-  }, [location]); 
+    console.log(`SearchBar useEffect triggered`);
+    console.log(`inputLocation: ${inputLocation}`);
+    setInputLocation(defaultLocation);
+    if (inputLocation !== "") {
+      console.log(`SearchBar useEffect triggered`);
+      const getForecast = async () => {
+        let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${inputLocation}&days=3&aqi=yes&alerts=yes`);
+        setForecast(response.data);
+      };
+      getForecast();
+    }
+  }, [setForecast, inputLocation, defaultLocation]); 
+
 
   return (
     <div>
