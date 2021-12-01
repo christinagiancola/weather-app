@@ -22,7 +22,8 @@ function SearchBar({ defaultLocation, setForecast }) {
     if (inputLocation !== "") {
       console.log(`SearchBar useEffect triggered`);
       const getForecast = async () => {
-        let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${inputLocation}&days=3&aqi=yes&alerts=yes`);
+        console.log(`SearchBar getForecast called`);
+        let response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${inputLocation}&days=3&aqi=yes&alerts=yes`);
         setForecast(response.data);
       };
       getForecast();
