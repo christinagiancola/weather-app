@@ -8,6 +8,5 @@
 }
 
 .container {
-  /* background: rgba(138, 172, 182, 0.75); */
   background: linear-gradient(to bottom, rgba(138, 172, 182, .9), rgba(255, 255, 255, 0.0));
 }
