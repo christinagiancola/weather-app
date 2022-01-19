@@ -39,7 +39,7 @@ function SearchBar({ defaultLocation, setForecast }) {
             className={styles.input}
           />
         </label>
-        <Button className={styles.button} type="submit" variant="outline-dark" size="sm">Get Forecast</Button>
+        <Button className={styles.button} type="submit" variant="outline-secondary" size="sm">Get Forecast</Button>
       </form>
     </div>
   );

@@ -2,7 +2,7 @@ import styles from './WeatherCards.module.css';
 import TodayCard from './TodayCard.js';
 import TonightCard from './TonightCard.js';
 import TomorrowCard from './TomorrowCard';
-import Card from 'react-bootstrap/Card';
+import Spinner from 'react-bootstrap/Spinner';
 
 function WeatherCards({ forecast }) {
   if (forecast) {
@@ -15,7 +15,11 @@ function WeatherCards({ forecast }) {
     );
   } else {
     return (
-      <Card className={styles.cardContainer}></Card>
+      <div className={styles.loadingContainer}>
+        <Spinner animation="grow" variant="light" role="status" className={styles.loadingSpinner}/>
+        <Spinner animation="grow" variant="light" role="status" className={styles.loadingSpinner}/>
+        <Spinner animation="grow" variant="light" role="status" className={styles.loadingSpinner}/>
+      </div>
     );
   }
 };

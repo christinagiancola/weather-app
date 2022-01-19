@@ -2,6 +2,17 @@ div {
 	padding: 0;
 }
 
+.loadingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  margin: 20px;
+}
+
 .cardContainer {
 	display: flex;
 	flex-direction: row;
