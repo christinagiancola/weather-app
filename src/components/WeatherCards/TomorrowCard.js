@@ -10,7 +10,8 @@ function TomorrowCard({ forecast }) {
     <Card className={styles.card} bsPrefix="customCard">
       <div className={styles.content}>
         <div className={styles.icon}><img src={conditionIcon} alt={conditionText}></img></div>
-        <h1 className={styles.cardTitle}>Tomorrow: {forecast.location.name}</h1>
+        <div className={styles.cardTitle}>{forecast.location.name}</div>
+        <div className={styles.cardTitle}>Tomorrow:</div>
         <div>Average Temp: {forecast.forecast.forecastday[1].day.avgtemp_f}&deg;F</div>
         <div>High: {forecast.forecast.forecastday[1].day.maxtemp_f}&deg;F</div>
         <div>Low: {forecast.forecast.forecastday[1].day.mintemp_f}&deg;F</div>

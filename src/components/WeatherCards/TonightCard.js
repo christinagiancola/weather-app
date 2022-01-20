@@ -10,8 +10,8 @@ function TonightCard({ forecast }) {
     <Card className={styles.card} bsPrefix="customCard">
       <div className={styles.content}>
         <div className={styles.icon}><img src={conditionIcon} alt={conditionText}></img></div>
-        <h1 className={styles.cardTitle}>Tonight: {forecast.location.name}</h1>
-        <div>Sunset: {forecast.forecast.forecastday[0].astro.sunset}</div>
+        <div className={styles.cardTitle}>{forecast.location.name}</div>
+        <div className={styles.cardTitle}>Tonight:</div>
         <div>Moonrise: {forecast.forecast.forecastday[0].astro.moonrise}</div>
         <div>Moon Illumination: {forecast.forecast.forecastday[0].astro.moon_illumination}</div>
         <div>Moon Phase: {forecast.forecast.forecastday[0].astro.moon_phase}</div>

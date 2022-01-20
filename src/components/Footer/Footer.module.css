@@ -1,3 +1,8 @@
+h4 {
+  margin-bottom: 0 !important;
+  padding-top: .15rem;
+  padding-bottom: .25rem;
+}
 
 .container {
 	position: fixed;
@@ -13,7 +18,7 @@
 .text {
   color: rgb(81, 103, 109);
 	text-transform: lowercase;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	text-align: center;
 	font-family: Nunito, sans-serif;
 }
