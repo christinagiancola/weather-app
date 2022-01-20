@@ -4,6 +4,9 @@
 	height: 100vh;
 	background-color: rgb(181, 209, 217, 0.5);
   background-image: url(./assets/sergey-pesterev-jWD3o-Ht8ZA-unsplash.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
 

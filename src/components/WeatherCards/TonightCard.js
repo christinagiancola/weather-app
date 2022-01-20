@@ -16,7 +16,7 @@ function TonightCard({ forecast }) {
         <div>Moon Illumination: {forecast.forecast.forecastday[0].astro.moon_illumination}</div>
         <div>Moon Phase: {forecast.forecast.forecastday[0].astro.moon_phase}</div>
         <div>Moonset: {forecast.forecast.forecastday[0].astro.moonset}</div>
-        <div>Sunrise: {forecast.forecast.forecastday[1].astro.sunrise}</div>
+        {/* <div>Sunrise: {forecast.forecast.forecastday[1].astro.sunrise}</div> */}
       </div>
     </Card>
   );

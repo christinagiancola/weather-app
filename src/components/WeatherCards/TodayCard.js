@@ -16,7 +16,7 @@ function TodayCard( {forecast} ) {
         <div>Low: {forecast.forecast.forecastday[0].day.mintemp_f}&deg;F</div>
         <div>Humidity: {forecast.forecast.forecastday[0].day.avghumidity}%</div>
         <div>Precipitation: {forecast.current.precip_in} inches</div>
-        <div>UV Index: {forecast.current.uv} out of 10</div>
+        {/* <div>UV Index: {forecast.current.uv} out of 10</div> */}
         <div>Sunrise: {forecast.forecast.forecastday[0].astro.sunrise}</div>
         <div>Sunset: {forecast.forecast.forecastday[0].astro.sunset}</div>
       </div>

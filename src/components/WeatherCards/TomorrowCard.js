@@ -17,7 +17,7 @@ function TomorrowCard({ forecast }) {
         <div>Low: {forecast.forecast.forecastday[1].day.mintemp_f}&deg;F</div>
         <div>Humidity: {forecast.forecast.forecastday[1].day.avghumidity}%</div>
         <div>Precipitation: {forecast.forecast.forecastday[1].day.totalprecip_in} inches</div>
-        <div>UV Index:  {forecast.forecast.forecastday[1].day.uv} out of 10</div>
+        {/* <div>UV Index:  {forecast.forecast.forecastday[1].day.uv} out of 10</div> */}
         <div>Sunrise: {forecast.forecast.forecastday[1].astro.sunrise}</div>
         <div>Sunset: {forecast.forecast.forecastday[1].astro.sunset}</div>
       </div>
