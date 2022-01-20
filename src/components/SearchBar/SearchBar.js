@@ -37,9 +37,10 @@ function SearchBar({ defaultLocation, setForecast }) {
             value={inputText} 
             onChange={e => setInputText(e.target.value)}
             className={styles.input}
+            placeholder=' enter a city or zip code'
           />
         </label>
-        <Button className={styles.button} type="submit" variant="outline-secondary" size="sm">Get Forecast</Button>
+        <Button className={styles.button} type="submit" variant="light" size="sm">Get Forecast</Button>
       </form>
     </div>
   );

@@ -7,7 +7,7 @@ function TonightCard({ forecast }) {
 
   
   return (
-    <Card className={styles.card}>
+    <Card className={styles.card} bsPrefix="customCard">
       <div className={styles.content}>
         <div className={styles.icon}><img src={conditionIcon} alt={conditionText}></img></div>
         <h1 className={styles.cardTitle}>Tonight: {forecast.location.name}</h1>

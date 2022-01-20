@@ -15,7 +15,6 @@ div {
 
 .cardContainer {
 	display: flex;
-	flex-direction: row;
 }
 
 @media (max-width: 1000px) {

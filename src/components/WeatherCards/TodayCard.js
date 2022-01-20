@@ -6,7 +6,7 @@ function TodayCard( {forecast} ) {
   let conditionText = `${forecast.current.condition.text}`;
 
   return (
-    <Card className={styles.card}>
+    <Card className={styles.card} bsPrefix="customCard">
       <div className={styles.content}>
         <div className={styles.icon}><img src={conditionIcon} alt={conditionText}></img></div>
         <div className={styles.cardTitle}>Today: {forecast.location.name}</div>

@@ -1,24 +1,19 @@
-/* * {
-  outline: 1px solid red;
-} */
-
-.header {
+.text {
   font-family: 'Nunito', sans-serif;
   color: rgb(81, 103, 109);
   text-transform: lowercase;
   text-align: center;
+}
+
+.header {
   font-size: 2.2em;  
 }
 
 .subheader {
-  font-family: 'Nunito', sans-serif;
-  color: rgb(81, 103, 109);
-  text-transform: lowercase;
-  text-align: center;
   font-size: 1.2em;
 }
 
 .container {
   padding: 40px 20px;
-  background: linear-gradient(to bottom, rgba(138, 172, 182, .9), rgba(255, 255, 255, 0.0));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.0));
 }

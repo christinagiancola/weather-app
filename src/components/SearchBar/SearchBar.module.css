@@ -7,19 +7,22 @@
 }
 
 .input {
+  box-sizing: border-box;
 	margin: 0.25rem 0.5rem;
 	outline: none;
 	height: 2rem;
   border: none;
   color: rgb(81, 103, 109);
+  border-radius: .35rem;
 }
 
 .input:focus {
-	box-shadow: 0 0 5px rgb(181, 209, 217);
-	border: 1px solid rgb(181, 209, 217);
+	box-shadow: 0 0 5px rgb(171, 181, 184);
+	outline: 1px solid rgb(255, 255, 255);
 }
 
 .button {
+  margin: 0.25rem 0.5rem;
   box-shadow: 0 0 5px rgb(181, 209, 217);
   text-transform: lowercase;
 }

@@ -1,19 +1,29 @@
+
+.container {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
 .link {
-	color: black;
+  color: rgb(81, 103, 109);
 	text-decoration: none;
 }
 
 .text {
+  color: rgb(81, 103, 109);
 	text-transform: lowercase;
 	font-size: 1rem;
 	text-align: center;
 	font-family: Nunito, sans-serif;
 }
 
-.container {
-	position: fixed;
-	padding-top: 0.8rem;
-	bottom: 0;
-	width: 100%;
-	background-color: rgba(181, 209, 217, 0.632);
+.gradient {
+  height: 50px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.0));
 }
+
+.footer {
+  background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0.8));
+}
+
