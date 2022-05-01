@@ -1,22 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,400&display=swap');
 
 .body {
-	height: 100vh;
+	min-height: 100vh;
+	height: 100%;
 	background-color: rgb(181, 209, 217, 0.5);
-  background-image: url(./assets/sergey-pesterev-jWD3o-Ht8ZA-unsplash.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-@media (max-width: 1000px) {
-	.body {
-    height: 100%;
-    min-height: 100vh;
-    background-size: cover;
-    background-color: rgb(181, 209, 217, 0.5);
-	}
+	background-image: url(./assets/taylor-van-riper-yQorCngxzwI-unsplash.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 .container {
